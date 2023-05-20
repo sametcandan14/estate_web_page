@@ -258,11 +258,21 @@ header ul.is-sticky li a.active {
   color: #999;
 }
 
+#properties-slider a.slick-arrow {
+  color: #000;
+  position: absolute;
+  top: -78px;
+  right: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+}
+
 #properties-slider a.slick-prev {
   right: 80px;
 }
 
-#properties-slider .stick-slide {
+#properties-slider .slick-slide {
   padding: 0 15px;
 }
 
@@ -388,6 +398,10 @@ header ul.is-sticky li a.active {
   margin-bottom: 3rem;
 }
 
+#services .flex {
+  flex-wrap: wrap;
+}
+
 #services .flex > div {
   width: 30%;
   margin-bottom: 2rem;
@@ -407,6 +421,15 @@ header ul.is-sticky li a.active {
   width: 75%;
 }
 
+#services .flex > div a {
+  color: #f69314;
+  text-decoration: none;
+}
+
+#services .flex > div a:hover {
+  text-decoration: underline;
+}
+
 /* testimonials styles */
 
 #testimonials {
@@ -421,12 +444,19 @@ header ul.is-sticky li a.active {
   text-align: center;
 }
 
-#testimonals-slider .testimonials-caption {
+#testimonials-slider blockquote {
+  font-size: 1.5rem;
+  font-style: italic;
+  margin: 1rem auto 3rem;
+  max-width: 740px;
+}
+
+#testimonials-slider .testimonials-caption {
   width: 200px;
   margin: 0 auto;
 }
 
-#testimonals-slider .testimonials-caption img {
+#testimonials-slider .testimonials-caption img {
   float: left;
   border-radius: 30px;
   width: 60px;
@@ -445,6 +475,7 @@ header ul.is-sticky li a.active {
   color: #222;
   top: 50%;
   margin-top: -35px;
+  z-index: 1;
 }
 
 #testimonials-slider .slick-next {
@@ -468,6 +499,7 @@ header ul.is-sticky li a.active {
   background: #fff;
   padding: 3rem;
   box-sizing: border-box;
+  height: 0%;
 }
 
 #form-container h3 {
@@ -892,5 +924,21 @@ footer small a:hover {
 
   footer {
     padding: 4rem 0;
+  }
+}
+
+@media (max-width: 400px) {
+  #hero .hero-text {
+    max-width: 275px;
+    width: 100%;
+  }
+
+  #properties button.rounded {
+    max-width: 250px;
+    width: 100%;
+  }
+
+  nav ul {
+    width: 200px;
   }
 }
